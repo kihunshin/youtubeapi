@@ -2,7 +2,7 @@ import React from 'react';
 import Searchbar from './Searchbar'
 import VideoDetail from './VideoDetail'
 import youtube from '../apis/youtube'
-import VideolList from './VideoList'
+import VideoList from './VideoList'
 class App extends React.Component {
   state ={
     videos: [],
@@ -18,7 +18,7 @@ class App extends React.Component {
     this.setState({
       videos: response.data.items
     })
-    console.log("this is response",response);
+    console.log(response);
   };
   handleVideoSelect = (video) => {
     this.setState({selectedVideo: video})
@@ -27,7 +27,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='ui container' style={{marginTop: 'lem'}}>
-        <SearchBar handleFormSubmit={this.handleSubmit}/>
+        <Searchbar handleFormSubmit={this.handleSubmit}/>
         <div className ='ui grid'>
 
           <div className='ui row'>

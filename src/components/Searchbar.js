@@ -1,6 +1,6 @@
 import React from 'react'
 
-export class Searchbar extends React.Component {
+export default class Searchbar extends React.Component {
     handleChange = (event) => {
         this.setState({
             term: event.target.value
@@ -13,6 +13,7 @@ export class Searchbar extends React.Component {
 
     render() {
         return (
+            <>
             <h2 style={{textAlign:"center"}}><img style={{width:'200px', height:'100px' , justifyContent:'center'}} src='http://www.thatitguy.net/wp-content/uploads/2018/08/1280px-Logo_of_YouTube_2015-2017.svg.png' alt="youtube logo"/></h2>
                 <div className='search-bar ui segment'>
                     <form onSubmit={this.handleSubmit} className='ui form'>
@@ -22,7 +23,7 @@ export class Searchbar extends React.Component {
                         </div>
                     </form>
                 </div>
-        )    
-        
+                </>
+        ) 
     }
 }

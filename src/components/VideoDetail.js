@@ -1,13 +1,12 @@
 import React from 'react'
 
-const VideoDetail = ({ video }) => {
+ const VideoDetail = ({ video }) => {
     if(!video) {
         return <div>
             <h1>키워드를 입력하세요</h1>
             <br></br>
-            <p style= {{fontSize='25px'}}>
+            <p style= {{fontSize:'25px'}}>
 유튜브 Api
-
             </p>
         </div>
     }
@@ -26,3 +25,5 @@ const VideoDetail = ({ video }) => {
         </div>
     )
 }
+
+export default VideoDetail
